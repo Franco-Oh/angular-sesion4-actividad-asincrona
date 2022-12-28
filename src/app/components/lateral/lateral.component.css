@@ -1,0 +1,13 @@
+input{
+    width: 69%;
+}
+
+.texto_responsive:before{
+    content: attr(data-desktop);
+}
+  
+@media (max-width:935px){
+    .texto_responsive:before {
+        content: attr(data-phone);
+    }
+}

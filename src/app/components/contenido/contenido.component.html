@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-7">
+        <p class="text-center pt-5">Crea tu propio CV de manera rapida y facil con una plantilla</p>
+        <div class="m-4 p-4 border">
+            <h1 class="text-center py-3">{{nombreCont}} {{apellidoCont}}</h1>
+            <h3>RESUMEN PROFESIONAL</h3>
+            <p>Cuento con amplia experiencia desepeñando distintos trabajos como {{profesionCont}}. Me encuentro con la disponibilidad y las ganas de poder trabajar con ustedes.</p>
+            <h3 class="pt-3">HISTORIAL LABORAL</h3>
+            <ul>
+                <li>{{laboralCont}}</li>
+            </ul> 
+            <h3 class="pt-3">APTITUDES</h3>
+            <ul>
+                <li>{{aptitudCont}}</li>
+            </ul>
+            <div class="row pt-3">
+                <div class="col 6 text-end">
+                    <p>CONTACTO:</p>
+                    <p>CORREO:</p>
+                    <p>DIRECCION:</p>
+                </div>
+                <div class="col 6 text-start">
+                    <p>{{contactoCont}}</p>
+                    <p>{{correoCont}}</p>
+                    <p>{{direccionCont}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <app-lateral (cambioNombre)="nombreCont = $event" (cambioApellido)="apellidoCont = $event" (cambioProfesion)="profesionCont = $event" (cambioLaboral)="laboralCont = $event" (cambioAptitud)="aptitudCont = $event" (cambioContacto)="contactoCont = $event" (cambioCorreo)="correoCont = $event" (cambioDireccion)="direccionCont = $event"></app-lateral>
+    </div>
+</div>
+
+
